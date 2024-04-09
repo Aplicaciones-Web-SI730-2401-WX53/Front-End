@@ -1,10 +1,10 @@
 <script setup>
 
+import FormBook from "@/components/form-book.component.vue";
 </script>
 
 <template>
-  <pv-button label="Submit" />
-  <pv-input-text />
+  <form-book />
 </template>
 
 <style scoped>
