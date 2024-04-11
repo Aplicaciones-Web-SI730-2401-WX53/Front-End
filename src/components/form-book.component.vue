@@ -1,14 +1,13 @@
 <template>
-    <pv-button label="Submit" />
-    <pv-input-text />
-    <pv-input-text />
-    <pv-input-text />
-    <pv-input-text />
+    {{ $t('hello',{ msg :'Juan'}) }}
 
+    <br />
+    <label for="name" >Name</label>
+    <pv-input-text id="name" />
+    <img src="../assets/logo.svg" alt="logo"/>
 
-
-
-
+    <br />
+    <pv-button label="Submit" aria-label="submit" />
 </template>
 
 <script>
