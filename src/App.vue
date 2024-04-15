@@ -1,11 +1,13 @@
 <script setup>
-
-import FormBook from "@/components/form-book.component.vue";
+import MainLogin from '@/components/main-login.component.vue'
+import CreateUser from '@/components/create-user.component.vue'
+import ListUser from '@/components/list-user.component.vue'
 </script>
 
 <template>
-  <form-book />
+  <main-login />
+  <create-user />
+  <list-user />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

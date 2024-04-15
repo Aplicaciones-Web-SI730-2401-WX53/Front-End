@@ -1,5 +1,5 @@
 const es = {
-    hello : 'Hola {msg}'
+  hello: 'Hola {msg}'
 }
 
-export default es;
+export default es
