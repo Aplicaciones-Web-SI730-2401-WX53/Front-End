@@ -1,7 +1,6 @@
 <template>
   <div>
-
-      <label>Create user</label>
+      <label>Update user</label>
     <div class="row">
       <label>name</label>
       <pv-input-text id="name" v-model="name"></pv-input-text>
@@ -20,7 +19,7 @@
 
 <script>
 export default {
-  name: 'create-user',
+  name: 'update-user',
   data() {
     return {
       name: '',

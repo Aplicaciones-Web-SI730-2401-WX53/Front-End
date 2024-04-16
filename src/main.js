@@ -12,9 +12,10 @@ import router from "@/router.js";
 const app = createApp(App)
 
 app.use(PrimeVue)
+app.use(i18n)
+app.use(router)
+
 app.component('pv-button', Button)
 app.component('pv-input-text', InputText)
 
-app.use(i18n)
-app.use(router)
 app.mount('#app')
