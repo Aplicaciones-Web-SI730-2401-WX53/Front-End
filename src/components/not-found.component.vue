@@ -1,13 +1,11 @@
 <template>
- <label>Ruta no encontrada</label>
+  <label>Ruta no encontrada</label>
 </template>
 
 <script>
 export default {
-    name: "not-found"
+  name: 'not-found'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
