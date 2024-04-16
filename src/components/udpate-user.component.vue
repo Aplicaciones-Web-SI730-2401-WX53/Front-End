@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import { UserApiServices } from '@/services/user-api.services.js'
 import router from '@/router.js'
+import { UserApiServices } from '@/services/user-api.services.js'
 
 export default {
   name: 'update-user',
@@ -43,7 +43,7 @@ export default {
       this.userApiServices.update(body, this.id).then((response) => {
         if (response.status === 200) {
           alert('User updated')
-          router.push('users')
+          router.replace('/')
         } else {
           alert('Erro updating  user')
         }

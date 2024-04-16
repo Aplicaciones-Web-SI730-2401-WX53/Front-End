@@ -7,8 +7,8 @@ export class UserApiServices {
   getByid(id) {
     return http.get('users/' + id)
   }
-  getAll() {
-    return http.get('users')
+  async getAll() {
+    return await http.get('users')
   }
   create(body) {
     return http.post('users', body)

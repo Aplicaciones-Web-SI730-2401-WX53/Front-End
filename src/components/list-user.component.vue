@@ -5,12 +5,14 @@
     <ul v-for="user in users">
       <li>{{ user.id + ' - ' + user.name }}</li>
       <router-link :to="{ name: 'updateUser', params: { id: user.id } }">Edit</router-link>
-      <pv-button @click="delete(user.id)">Eliminar</pv-button>
+
+      <pv-button @click="deleteUser(user.id)">Delete</pv-button>
     </ul>
   </div>
 </template>
 
 <script>
+import router from '@/router.js'
 import { UserApiServices } from '@/services/user-api.services.js'
 
 export default {
@@ -22,21 +24,23 @@ export default {
     }
   },
   methods: {
-    delete(id) {
-      this.userService.delete(id).then((response) => {
+    deleteUser(id) {
+      this.userApiServices.delete(id).then((response) => {
         if (response.status == 200) {
-          alert('user' + id + ' deleted')
+          alert('User saved')
+          router.push('users')
+        } else {
+          alert('Erro savgin  user')
         }
       })
     }
   },
-
   async created() {
-    //this.users = await axios.get("http://localhost:3000/users") // Promesa
-
-    this.userService.getAll().then((response) => {
+    const response = await this.userService.getAll() // Promesa
+    this.users = response.data
+    /*this.userService.getAll().then((response) => {
       this.users = response.data
-    })
+    })*/
   }
 }
 </script>
